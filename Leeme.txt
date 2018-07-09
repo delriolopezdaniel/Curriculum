@@ -1,0 +1,17 @@
+-Hola, buenos días, las instrucciones que se darán a continuación son para 
+facilitar el uso del CV interactivo. La carpeta también contiene una versión en pdf.
+
+1-Descomprimir el archivo "Zip".
+
+2-Pulsar "botón derecho" del ratón sobre el archivo "CV_Daniel del Rio Lopez.html" y 
+seleccionar la opción "abrir con..." y elegir  cualquiera de los siguientes navegadores
+(Google Chrome, Firefox o Internet Explorer).
+
+3-En el primer apartado se mostraran los datos personales tras pulsar con el "botón izquierdo"
+del ratón el campo que desea ver. En caso de querer que desaparezcan los datos repetir el proceso.
+
+4-En el tercer apartado se muestra un cuadro con una imagen y en la parte inferior derecha 
+unas palabras cuya función permite navegar entre las imágenes.
+
+
+Gracias por su tiempo.

@@ -1,0 +1,232 @@
+﻿ <!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<style>
+	.foto{
+		border:3px solid black;
+		height:150px;
+		width:100px;
+		float:right;
+		
+	}
+	.foto2{
+		border:3px solid orange;
+		height:200px;
+		width:200px;
+		margin:80px;
+		
+	}
+	.foc{
+		width:500px;
+		display:block;
+
+	}
+	.borde{
+		border-bottom:1px solid black;
+		width:500px;
+	}
+	.borde2{
+		border-bottom:1px solid orange;
+		height:20px;
+		width:200px;
+		margin:80px;
+	}
+	.imagen{
+		height:50px;
+		width:50px;
+		margin:30px;
+	}
+	.imagen2{
+		height:200px;
+		width:200px;
+		
+	}
+	.datos{
+		margin:30px;
+	}
+	.datos2{
+		margin:150px;
+	}
+	.competencias{
+		height:100px;
+		width:150px;
+		float:right;
+	}
+	.posDato{
+		float:inherit;
+	}
+	
+
+	</style>
+	<script >
+        function muestra_oculta(id){
+		if (document.getElementById){ 
+			var el = document.getElementById(id);
+			el.style.display = (el.style.display == 'none') ? 'block' : 'none'; 
+			}
+		}
+		window.onload = function(){
+		muestra_oculta('contenido');
+		}
+
+		function parpadeo() {
+			var imagen = document.images["parpadeante"];
+			imagen.style.visibility = (imagen.style.visibility == "visible") ? "hidden" : "visible";
+
+			var imagen2 = document.images["parpadeante2"];
+			imagen2.style.visibility = (imagen.style.visibility == "visible") ? "hidden" : "visible";
+
+			var imagen3 = document.images["parpadeante3"];
+			imagen3.style.visibility = (imagen.style.visibility == "visible") ? "hidden" : "visible";
+		}
+		setInterval("parpadeo()", 500);
+
+		var imagenesIcon = new Array(13);
+		imagenesIcon[0] = "recursos/Icono_de_Android.png";
+		imagenesIcon[1] = "recursos/versiones-de-linux-mas-utilizadas-en-este-2017-630x354.jpg"
+		imagenesIcon[2] = "recursos/ViOrbwindows_ViOrb_282.png"
+		imagenesIcon[3] = "recursos/kisspng-microsoft-office-2010-microsoft-word-computer-icon-5af5896ab33988.5100798615260409387341.jpg"
+		imagenesIcon[4] = "recursos/1486565571-microsoft-office-excel_81549.png"
+		imagenesIcon[5] = "recursos/PowerPoint2_35733.png"
+		imagenesIcon[6] = "recursos/javascript.png"
+		imagenesIcon[7] = "recursos/java_22523.png"
+		imagenesIcon[8] = "recursos/dbs-sqlite_icon-icons.com_50904.png"
+		imagenesIcon[9] = "recursos/mysql-logo-filled.png"
+		imagenesIcon[10] = "recursos/html.png"
+		imagenesIcon[11] = "recursos/logo1.png"
+		imagenesIcon[12] = "recursos/salesforce.png"
+		
+		var imagenesNombres =  new Array(13);
+		imagenesNombres[0] = "ANDROID";
+		imagenesNombres[1] = "LINUX"
+		imagenesNombres[2] = "WINDOWS"
+		imagenesNombres[3] = "WORD"
+		imagenesNombres[4] = "EXCEL"
+		imagenesNombres[5] = "POWERPOINT"
+		imagenesNombres[6] = "JAVASCRIPT"
+		imagenesNombres[7] = "JAVA"
+		imagenesNombres[8] = "SQLITE"
+		imagenesNombres[9] = "MYSQL"
+		imagenesNombres[10] = "HTML"
+		imagenesNombres[11] = "MONGODB"
+		imagenesNombres[12] = "SALESFORCE"
+
+
+
+
+
+		var long = imagenesIcon.length;
+		var cualvemos = 0;
+
+		function mover(direccion) {
+
+		var laimagen = document.getElementById("imagenes");
+
+		var eltexto = document.getElementById("nombreIcono");
+
+		var ultima = imagenesIcon.length - 1; 
+
+		var auxiliar = cualvemos + direccion; 
+		
+		if(auxiliar < 0) {
+		auxiliar = ultima; 
+		}
+		
+		if(auxiliar > ultima) { 
+		auxiliar = 0; 
+		}
+
+		cualvemos = auxiliar;
+		laimagen.src = imagenesIcon[cualvemos];
+		eltexto.innerHTML = imagenesNombres[cualvemos];
+
+}
+
+</script>
+
+
+</head>
+<body>
+<div class="foc">
+<div class="foto">
+	<div >
+	<img src="recursos/IMG_20170928_122739.jpg" height=150px width=100px>
+	</div>
+</div>
+<div class="borde">
+	<div ><b style="background-color:#98CEFF ">
+	DATOS:
+	</b>
+	<b>Clikear en cada una para ver informacion.</b> <b>Clikear una seguna vez para ocultarla</b>
+		<div class="datos" name="rgDatos">
+			<a  style='cursor: pointer;' onClick="muestra_oculta('nnombre')"  class="boton_mostrar">NOMBRE: </a>
+			<div class="posDato" id ="nnombre" style="display:none"><p><h3>Daniel</h3></p></div>
+			<br/>
+
+			<a  style='cursor: pointer;' onClick="muestra_oculta('napellido')"  class="boton_mostrar">APELLIDOS: </a>
+			<div class="posDato" id ="napellido" style="display:none"><p><h3>del Rio Lopez</h3></p></div>
+			<br/>
+
+			<a  style='cursor: pointer;' onClick="muestra_oculta('ndni')"  class="boton_mostrar">DNI: </a>
+			<div class="posDato" id ="ndni" style="display:none"><p><h3>51525643P</h3></p></div>
+			<br/>
+
+			<a  style='cursor: pointer;' onClick="muestra_oculta('nfechaN')"  class="boton_mostrar">FECHA NACIMIENTO:</a>
+			<div class="posDato" id ="nfechaN" style="display:none"><p><h3>09/Marzo/1996</h3></p></div>
+			<br/>
+
+			<a  style='cursor: pointer;' onClick="muestra_oculta('nvivienda')"  class="boton_mostrar"> RESIDENCIA ACTUAL: </a>
+			<div class="posDato" id ="nvivienda" style="display:none"><p><h3>Madrid - Calle Ribadavia 37 1º 1</h3></p></div>
+			<br/>
+				<a  style='cursor: pointer;' onClick="muestra_oculta('ncorreo')"  class="boton_mostrar"> CORREO ELECTRONICO: </a>
+			<div class="posDato" id ="ncorreo" style="display:none"><p><h3>delriolopezdaniel@gmail.com</h3></p></div>
+			<br/>
+
+			<a  style='cursor: pointer;' onClick="muestra_oculta('ntelefono')"  class="boton_mostrar">TELEFONO/S: </a><br/>
+			<div class="posDato" id ="ntelefono" style="display:none"><p><h3>622636899 / 917390207</h3></p></div>
+
+		</div>
+	</div>
+</div>
+
+
+
+<div class="borde">
+	<div><b style="background-color:#2DEA60">
+	FORMACION ACADEMICA:</b>
+		<div class = "datos"> ACTUAL (En curso):<b> DESARROLLO DE APLICACIONES MULTIPLATAFORMA</b>
+		<p>Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos. Aplicando técnicas y procedimientos relacionados con la seguridad en sistemas. Como los siguientes:</p></div>
+		<div>
+			<img class="imagen" name="parpadeante" src="recursos/Icono_de_Android.png" alt="imagen parpadeante" />
+			<img class="imagen" name="parpadeante2" src="recursos/versiones-de-linux-mas-utilizadas-en-este-2017-630x354.jpg" alt="imagen parpadeante" />
+			<img class="imagen" name="parpadeante3" src="recursos/ViOrbwindows_ViOrb_282.png" alt="imagen parpadeante" />
+		</div>
+		<div class="datos ">BACHILLERATO CIENTIFICO TECNOLOGICO</div>
+		<div class="datos ">E.S.O.</div>
+		
+	</div>
+</div>
+<div>
+	<div class="borde"><b style="background-color:#FE9A2E ">
+	OTROS TÍTULOS, COMPETENCIAS Y DATOS DE INTERÉS:</b>
+		<b>Conocimientos en:</b>
+		<div class= "foto2" id="fotoIcono"><img class="imagen2" id="imagenes" src="recursos/salesforce.png"></div>
+		<span class = "borde2" id="nombreIcono" >salesforce</span>
+		<a href="javascript:mover(-1);"> anterior </a> | <a href="javascript:mover(1);"> siguiente </a>
+
+
+		<div class="datos" ><b>Idiomas: </b>
+		<p >INGLES NIVEL B2</p></div>
+		
+		<div class="datos" ><b>Presentacion: </b>
+		<p >Soy una persona responsable, comprometida con mi trabajo y puntual. Me gustaría destacar mi capacidad para trabajar en equipo .</p></div>
+		
+	</div>
+</div>
+</div>
+
+</body>
+</html>
